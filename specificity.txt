@@ -1,0 +1,26 @@
+1. Analysis of CSS Properties and Selectors
+Paragraph A: Receives all its properties (color, font-size, font-family, line-height, padding) from the element selector (p). It is the only rule that matches this element.
+
+Paragraph B: Receives its line-height from the element selector (p). However, the other properties (color, font-size, background-color, padding, border-left, font-family) are taken from the class selector (.info) because a class has higher specificity than an element.
+
+Paragraph C: Receives line-height from the p selector. All other properties (color, font-size, font-style, etc.) come from the ID selector (#warning). An ID selector has higher specificity than both element and class selectors.
+
+Paragraph D: This element matches all four rules. It inherits line-height from the p selector. The majority of its visual properties are determined by the combined ID and class selector (#warning.info), which has the highest specificity score.
+
+2. Style for Paragraph D
+Property: color
+
+Winning Value: darkorange
+
+Why: The browser calculates the specificity score for each rule. The selector #warning.info consists of one ID and one class, making it more specific than .info (0,1,0), or p (0,0,1).
+
+Property: font-family
+
+Winning Value: 'Courier New', monospace
+
+Why: Even though #warning.info is the most specific selector overall, it does not define a font-family. Therefore, the browser looks at the next most specific rule that does define it. Between the ID selector #warning and the class selector .info, the ID selector wins because it has higher specificity.
+
+3. External vs. Internal CSS (h1 Exercise)
+Result: The h1 title will display the color defined in the internal CSS (inside the <style> tag), but it will keep the font-style and padding defined in the external CSS (style.css).
+
+Explanation: Since both the external and internal rules use the same selector (h1), they have the exact same specificity. According to the CSS Cascade, when specificity is equal, the last rule processed by the browser wins. Since the <style> tag in the <head> comes after the <link> to the external stylesheet, the internal color rule overrides the external one. The properties that do not conflict (padding, font-style) are simply merged.
