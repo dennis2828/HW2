@@ -1,9 +1,5 @@
-// Question Bank - Requirement for HW2
+
 const questionBank = [
-    { 
-        keywords: ["trading", "nas100", "dax40", "smc", "order flow"], 
-        answer: "Dennis specializes in Order Flow, CVD absorption, and Smart Money Concepts for high-performance index trading." 
-    },
     { 
         keywords: ["projects", "automation", "python", "script"], 
         answer: "Current projects include automated Google Drive folder organization and AI-assisted web development." 
