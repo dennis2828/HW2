@@ -14,7 +14,7 @@ const questionBank = [
     },
     { 
         keywords: ["hello", "hi", "hey"], 
-        answer: "Hello! I'm here to help. Ask me about Dennis's trading strategies, AI projects, or the DRT Works brand." 
+        answer: "Hello! I'm here to help. Ask me about Dennis's projects, AI projects, or anything else you'd like to know!" 
     }
 ];
 
